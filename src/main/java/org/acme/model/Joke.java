@@ -24,8 +24,19 @@ public class Joke implements Serializable {
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     Category category;
+    String path;
+
+
 
     public Joke() {
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public String getImage() {
